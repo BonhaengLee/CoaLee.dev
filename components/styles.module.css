@@ -101,6 +101,51 @@
   color: #0077b5;
 }
 
+.linkedin.tooltipLink {
+  position: relative;
+}
+
+.tooltipLink[data-tooltip]:not([data-tooltip=''])::before {
+  content: attr(
+    data-tooltip
+  ); /*툴팁 표시 내용은 버튼의 "data-tooltip" 속성값으로 */
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  padding: 10px 7px;
+  border-radius: 7px;
+  max-width: 300px;
+  width: 350%; /* 버튼 너비 250% 크기만큼 툴팁 크기 설정 */
+  right: 25%; /* 버튼 왼쪽에서 부터 버튼 너비 25% 이동한 위치에 툴팁 왼쪽이 오게 */
+  bottom: 120%; /* 버튼 밑에서 부터 버튼 높이 120% 높이에 툴팁 밑부분이 오게 */
+  opacity: 0; /* 기본 상태는 안보이게 */
+  transition: all 0.5s linear; /* 나타났다 사라지는 애니메이션 */
+}
+
+.tooltipLink[data-tooltip]:not([data-tooltip=''])::after {
+  content: '';
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: rgba(0, 0, 0, 0.5);
+  width: 0; /* 가상 요소의 크기가 0이기 때문에 테두리선이 삼각형 모양이 됨 */
+  height: 0;
+  position: absolute;
+  left: 50%; /* 버튼 너비 50% 크기만큼 오른쪽으로 이동 */
+  bottom: 100%; /* 버튼 높이만큼 위로 방향 팁 밑 부분 이동 */
+  transform: translate(-50%, 0);
+
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.tooltipLink:hover[data-tooltip]:not([data-tooltip=''])::before,
+.tooltipLink:hover[data-tooltip]:not([data-tooltip=''])::after {
+  opacity: 1;
+}
+
 .comments {
   width: 100%;
   margin-top: 2em;

@@ -4,6 +4,7 @@ import { IoSunnyOutline, IoMoonSharp } from 'react-icons/io5'
 import * as config from 'lib/config'
 
 import styles from './styles.module.css'
+import cs from 'classnames'
 
 // TODO: merge the data and icons from PageSocial with the social links in Footer
 
@@ -24,6 +25,8 @@ export const Footer: React.FC<{
     setHasMounted(true)
   }, [])
 
+  const [show, setShow] = React.useState(false)
+
   return (
     <footer className={styles.footer}>
       <div className={styles.copyright}>Copyright 2021 {config.author}</div>
@@ -33,7 +36,7 @@ export const Footer: React.FC<{
           <a
             className={styles.toggleDarkMode}
             onClick={toggleDarkModeCb}
-            title='Tottle dark mode'
+            title='Toggle dark mode'
           >
             {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
           </a>
@@ -41,7 +44,7 @@ export const Footer: React.FC<{
       ) : null}
 
       <div className={styles.social}>
-        {config.twitter && (
+        {/* {config.twitter && (
           <a
             className={styles.twitter}
             href={`https://twitter.com/${config.twitter}`}
@@ -51,7 +54,7 @@ export const Footer: React.FC<{
           >
             <FaTwitter />
           </a>
-        )}
+        )} */}
 
         {config.github && (
           <a
@@ -67,12 +70,16 @@ export const Footer: React.FC<{
 
         {config.linkedin && (
           <a
-            className={styles.linkedin}
-            href={`https://www.linkedin.com/in/${config.linkedin}`}
-            title={`LinkedIn ${config.author}`}
+            className={cs(styles.linkedin, styles.tooltipLink)}
+            // href={`https://www.linkedin.com/in/${config.linkedin}`}
+            href={`https://www.jobflex.com/${config.linkedin}`}
+            // title={`LinkedIn ${config.author}`}
+            data-tooltip='이력서는 준비중입니다.'
             target='_blank'
             rel='noopener noreferrer'
+            onClick={(event) => event.preventDefault()}
           >
+            {/* <p style={{ display: show ? 'block' : 'none' }}>만드는 중,,,</p> */}
             <FaLinkedin />
           </a>
         )}
