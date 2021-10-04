@@ -122,6 +122,8 @@
   bottom: 120%; /* 버튼 밑에서 부터 버튼 높이 120% 높이에 툴팁 밑부분이 오게 */
   opacity: 0; /* 기본 상태는 안보이게 */
   transition: all 0.5s linear; /* 나타났다 사라지는 애니메이션 */
+
+  pointer-events: none;
 }
 
 .tooltipLink[data-tooltip]:not([data-tooltip=''])::after {
@@ -139,6 +141,8 @@
 
   opacity: 0;
   transition: all 0.5s linear;
+
+  pointer-events: none;
 }
 
 .tooltipLink:hover[data-tooltip]:not([data-tooltip=''])::before,

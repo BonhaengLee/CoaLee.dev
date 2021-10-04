@@ -19,8 +19,7 @@ module.exports = {
   // social usernames (optional)
   twitter: 'coa_lee',
   github: 'BonhaengLee',
-  linkedin:
-    'zf_user/member/resume/view/edit_icon_fl/y/res_idx/18113411/mandb_view/n',
+  linkedin: 'my-dashboard/fitup',
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults

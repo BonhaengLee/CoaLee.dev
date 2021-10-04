@@ -79,7 +79,6 @@ export const Footer: React.FC<{
             rel='noopener noreferrer'
             onClick={(event) => event.preventDefault()}
           >
-            {/* <p style={{ display: show ? 'block' : 'none' }}>만드는 중,,,</p> */}
             <FaLinkedin />
           </a>
         )}
