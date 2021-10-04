@@ -15,7 +15,7 @@ import { Tweet, TwitterContextProvider } from 'react-static-tweets'
 import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
 
 // utils
-import { getBlockTitle } from 'notion-utils'
+import { getBlockTitle, getPageTableOfContents } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapNotionImageUrl } from 'lib/map-image-url'
 import { getPageDescription } from 'lib/get-page-description'
@@ -98,9 +98,13 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   const title = getBlockTitle(block, recordMap) || site.name
 
+  const tableOfContents =
+    getPageTableOfContents(block as PageBlock, recordMap) || site.name
+
   console.log('notion page', {
     isDev: config.isDev,
     title,
+    tableOfContents,
     pageId,
     rootNotionPageId: site.rootNotionPageId,
     recordMap
