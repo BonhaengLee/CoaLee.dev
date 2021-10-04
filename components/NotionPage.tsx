@@ -177,6 +177,11 @@ export const NotionPage: React.FC<types.PageProps> = ({
         <meta name='twitter:title' content={title} />
         <meta property='twitter:domain' content={site.domain} />
 
+        <meta
+          name='google-site-verification'
+          content='8WzA0piVXHSmKH-wSl-1FFx70aQXrmG2YH803CqtBug'
+        />
+
         {config.twitter && (
           <meta name='twitter:creator' content={`@${config.twitter}`} />
         )}
