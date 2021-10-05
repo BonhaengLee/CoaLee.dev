@@ -40,8 +40,11 @@ import { bootstrap } from 'lib/bootstrap-client'
 import { fathomId, fathomConfig } from 'lib/config'
 import * as Fathom from 'fathom-client'
 
+import ReactModal from 'react-modal'
+
 if (typeof window !== 'undefined') {
   bootstrap()
+  ReactModal.setAppElement('body')
 }
 
 export default function App({ Component, pageProps }) {

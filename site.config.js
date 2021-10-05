@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Coa Lee',
-  domain: 'outgoing-bear-60f.notion.site',
+  domain: 'https://coa-lee-dev.vercel.app/',
   author: 'Bonhaeng Lee',
 
   // open graph metadata (optional)
