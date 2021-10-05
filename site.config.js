@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Coa Lee',
-  domain: 'https://coa-lee-dev.vercel.app/',
+  domain: 'coa-lee-dev.vercel.app',
   author: 'Bonhaeng Lee',
 
   // open graph metadata (optional)
