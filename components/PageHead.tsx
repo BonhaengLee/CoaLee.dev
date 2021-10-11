@@ -14,10 +14,10 @@ export const PageHead: React.FC<types.PageProps> = ({ site }) => {
         content='width=device-width, initial-scale=1, shrink-to-fit=no'
       />
 
-      <meta
+      {/* <meta
         name='google-site-verification'
         content='8WzA0piVXHSmKH-wSl-1FFx70aQXrmG2YH803CqtBug'
-      />
+      /> */}
 
       {site?.description && (
         <>

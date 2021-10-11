@@ -12,7 +12,7 @@ import { PageBlock } from 'notion-types'
 import { Tweet, TwitterContextProvider } from 'react-static-tweets'
 
 // core notion renderer
-import { NotionRenderer, Code, Collection, CollectionRow } from 'react-notion-x'
+import { NotionRenderer } from 'react-notion-x'
 
 // utils
 import { getBlockTitle, getPageTableOfContents } from 'notion-utils'
@@ -37,20 +37,20 @@ import { ReactUtterances } from './ReactUtterances'
 
 import styles from './styles.module.css'
 
-// const Code = dynamic(() =>
-//   import('react-notion-x').then((notion) => notion.Code)
-// )
-//
-// const Collection = dynamic(() =>
-//   import('react-notion-x').then((notion) => notion.Collection)
-// )
-//
-// const CollectionRow = dynamic(
-//   () => import('react-notion-x').then((notion) => notion.CollectionRow),
-//   {
-//     ssr: false
-//   }
-// )
+const Code = dynamic(() =>
+  import('react-notion-x').then((notion) => notion.Code)
+)
+
+const Collection = dynamic(() =>
+  import('react-notion-x').then((notion) => notion.Collection)
+)
+
+const CollectionRow = dynamic(
+  () => import('react-notion-x').then((notion) => notion.CollectionRow),
+  {
+    ssr: false
+  }
+)
 
 const Pdf = dynamic(() => import('react-notion-x').then((notion) => notion.Pdf))
 
@@ -162,6 +162,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
     pageAside = <PageSocial />
   }
 
+  console.log(title)
+
   return (
     <TwitterContextProvider
       value={{
@@ -173,7 +175,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
       }}
     >
       <PageHead site={site} />
-
       <Head>
         <meta property='og:title' content={title} />
         <meta property='og:site_name' content={site.name} />
@@ -181,10 +182,10 @@ export const NotionPage: React.FC<types.PageProps> = ({
         <meta name='twitter:title' content={title} />
         <meta property='twitter:domain' content={site.domain} />
 
-        <meta
+        {/* <meta
           name='google-site-verification'
           content='8WzA0piVXHSmKH-wSl-1FFx70aQXrmG2YH803CqtBug'
-        />
+        /> */}
 
         {config.twitter && (
           <meta name='twitter:creator' content={`@${config.twitter}`} />
@@ -220,9 +221,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       </Head>
 
       <CustomFont site={site} />
-
       {isLiteMode && <BodyClassName className='notion-lite' />}
-
       <NotionRenderer
         bodyClassName={cs(
           styles.notion,
@@ -284,7 +283,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
           />
         }
       />
-
       <GitHubShareButton />
     </TwitterContextProvider>
   )
