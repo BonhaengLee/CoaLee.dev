@@ -16,10 +16,10 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
         <meta property='og:site_name' content={title} />
         <meta property='og:title' content={title} />
 
-        {/* <meta
+        <meta
           name='google-site-verification'
           content='8WzA0piVXHSmKH-wSl-1FFx70aQXrmG2YH803CqtBug'
-        /> */}
+        />
 
         <title>{title}</title>
       </Head>
