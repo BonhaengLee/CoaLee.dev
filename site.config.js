@@ -8,7 +8,7 @@ module.exports = {
 
   // basic site info (required)
   name: 'Coa Lee',
-  domain: 'coa-lee-dev.vercel.app',
+  domain: 'how-to-tolerate-uncertainty.vercel.app',
   author: 'Bonhaeng Lee',
 
   // open graph metadata (optional)
