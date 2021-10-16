@@ -1,10 +1,10 @@
 {
-  "name": "nextjs-notion-starter-kit",
+  "name": "how-to-tolerate-uncertainty",
   "version": "0.1.0",
   "private": true,
-  "description": "The perfect starter kit for building beautiful websites with Next.js and Notion.",
-  "author": "Travis Fischer <travis@transitivebullsh.it>",
-  "repository": "transitive-bullshit/nextjs-notion-starter-kit",
+  "description": "how-to-tolerate-uncertainty is my blog. Notion-powered website with Next.js and Vercel.",
+  "author": "Bonhaeng Lee <unjertainty@gmail.com>",
+  "repository": "BonhaengLee/How-to-tolerate-uncertainty",
   "license": "MIT",
   "engines": {
     "node": ">=10"
