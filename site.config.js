@@ -8,11 +8,12 @@ module.exports = {
 
   // basic site info (required)
   name: 'Coa Lee',
-  domain: 'how-to-tolerate-uncertainty.vercel.app',
+  domain: 'coa-lee-dev',
   author: 'Bonhaeng Lee',
 
   // open graph metadata (optional)
-  description: 'Example site description',
+  description: `coa-lee-dev is my blog. Notion-powered website with Next.js and Vercel.
+  I am taking notes while studying software development that I need (coding tests, technical interviews, programming languages, etc.). I can also write other hobbies on my blog.`,
   socialImageTitle: 'Coa Lee',
   socialImageSubtitle: 'Hello World! 👋',
 

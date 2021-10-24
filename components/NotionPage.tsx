@@ -184,17 +184,17 @@ export const NotionPage: React.FC<types.PageProps> = ({
         <meta property='og:title' content={title} />
         <meta property='og:site_name' content={site.name} />
 
-        <meta name='twitter:title' content={title} />
-        <meta property='twitter:domain' content={site.domain} />
+        {/* <meta name='twitter:title' content={title} />
+        <meta property='twitter:domain' content={site.domain} /> */}
 
         <meta
           name='google-site-verification'
           content='8WzA0piVXHSmKH-wSl-1FFx70aQXrmG2YH803CqtBug'
         />
 
-        {config.twitter && (
+        {/* {config.twitter && (
           <meta name='twitter:creator' content={`@${config.twitter}`} />
-        )}
+        )} */}
 
         {socialDescription && (
           <>
@@ -204,7 +204,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
           </>
         )}
 
-        {socialImage ? (
+        {/* {socialImage ? (
           <>
             <meta name='twitter:card' content='summary_large_image' />
             <meta name='twitter:image' content={socialImage} />
@@ -212,7 +212,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
           </>
         ) : (
           <meta name='twitter:card' content='summary' />
-        )}
+        )} */}
 
         {canonicalPageUrl && (
           <>

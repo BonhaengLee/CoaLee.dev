@@ -1,10 +1,10 @@
 {
-  "name": "how-to-tolerate-uncertainty",
+  "name": "coa-lee-dev",
   "version": "0.1.0",
   "private": true,
-  "description": "how-to-tolerate-uncertainty is my blog. Notion-powered website with Next.js and Vercel.",
+  "description": "coa-lee-dev is my blog. Notion-powered website with Next.js and Vercel.",
   "author": "Bonhaeng Lee <unjertainty@gmail.com>",
-  "repository": "BonhaengLee/How-to-tolerate-uncertainty",
+  "repository": "BonhaengLee/coa-lee-dev",
   "license": "MIT",
   "engines": {
     "node": ">=10"
